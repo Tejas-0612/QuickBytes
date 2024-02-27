@@ -1,3 +1,93 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border list-none p-0 m-0 scroll-smooth;
+  }
+
+  body {
+    @apply min-h-screen;
+  }
+}
+
+@layer components {
+  .body {
+    @apply flex flex-col justify-center;
+  }
+
+  /* Category  */
+
+  .categories-full {
+    @apply w-full flex justify-center gap-x-4 py-2 border-b-2 border-gray-200;
+  }
+
+  .category-menu {
+    @apply absolute flex flex-col justify-between;
+  }
+  .category-menu-list {
+    @apply fixed z-50 w-[220px] bg-[#352f36] text-white  bg-opacity-100 h-screen flex flex-col align-super gap-y-4 md:gap-y-3 gap-x-2 md:py-2 border-gray-400 py-2 transition-all ease-in-out duration-300;
+  }
+
+  /* Shimmer  */
+
+  .shimmer-container {
+    @apply flex flex-col md:flex-wrap gap-8 justify-center z-10;
+  }
+
+  /* News container  */
+
+  .news-container {
+    @apply flex flex-wrap gap-8 justify-center z-10;
+  }
+
+  /* News Card  */
+
+  .news-card {
+    @apply w-[85%] md:w-8/12 h-auto md:h-[345px] flex flex-col md:flex-row border-2 border-white rounded-xl shadow-xl drop-shadow-2xl z-0;
+  }
+
+  .card-img-container {
+    @apply md:w-[38%] h-[45%] md:h-full;
+  }
+
+  .card-img {
+    @apply w-[96%] mx-auto m-3 bg-cover bg-center overflow-hidden rounded-md h-[93%];
+  }
+
+  .card-info-container {
+    @apply md:w-[62%] ml-3 md:ml-2 py-4 md:px-2 flex flex-col justify-between;
+  }
+
+  .scroll-to-top {
+    @apply w-14 fixed bottom-8 right-8 font-bold py-2 px-2 rounded-full transition duration-300 ease-in-out;
+  }
+
+  .loadmore-btn {
+    @apply mx-auto px-6 py-1 font-semibold border-2 my-16 shadow-md hover:shadow-2xl;
+  }
+
+  /* footer  */
+
+  .footer {
+    @apply bg-gray-100 text-black min-h-48 md:h-48 flex md:flex-row flex-col items-center;
+  }
+
+  .footer-p1 {
+    @apply flex flex-col md:flex-row justify-center pt-3 px-16 gap-8  md:gap-20;
+  }
+
+  .footer-hr {
+    @apply border-t md:border-l border-gray-600 h-4 md:h-28 w-full md:w-0;
+  }
+
+  .footer-p3 {
+    @apply flex flex-col justify-center px-20 my-4 md:my-0;
+  }
+
+  /* Error  */
+  .error {
+    @apply flex flex-col justify-center items-center;
+  }
+}
