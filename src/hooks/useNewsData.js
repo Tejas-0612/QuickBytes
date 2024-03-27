@@ -25,9 +25,8 @@ const useNewsData = () => {
     const apiUrl =
       location.pathname === "/"
         ? NEWS_DATA_URL
-        : NEWS_CATEGORY_DATA_URL + "%2F" + category;
-    const queryParams =
-      apiUrl === NEWS_DATA_URL ? `&max_limit=${maxLimit}` : `%3Fpage%3D${page}`;
+        : NEWS_CATEGORY_DATA_URL + category;
+    const queryParams = apiUrl === NEWS_DATA_URL ? `${maxLimit}` : `/${page}`;
 
     const response = await fetch(`${apiUrl}${queryParams}`);
     const json = await response.json();
