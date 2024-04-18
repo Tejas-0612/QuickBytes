@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="https://quick-bytes.vercel.app/" target="_blank">
-      <img src="./src/assets/Logo.png" alt="Project Banner">
+      <img src="./src/assets/logo.png" alt="Project Banner">
     </a>
   <br />
 
